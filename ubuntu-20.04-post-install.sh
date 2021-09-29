@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export DEBIAN_FRONTEND=noninteractive
+sudo apt update -y
 sudo apt -qq install -y apt-transport-https curl vim git tlp vlc qbittorrent
 
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv

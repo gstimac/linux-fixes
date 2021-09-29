@@ -4,7 +4,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ gstimac* ]
   pull_request:
     branches: [ master ]
 
@@ -26,9 +26,3 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: bash ubuntu-20.04-post-install.sh
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.

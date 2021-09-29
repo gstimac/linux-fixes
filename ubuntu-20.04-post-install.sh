@@ -1,17 +1,17 @@
 #!/bin/bash
+set -euxo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt update -y
-sudo apt -qq install -y apt-transport-https curl vim git tlp vlc qbittorrent
+sudo apt -qq install -y apt-transport-https curl neovim htop git qbittorrent
 
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.bashrc
-. ~/.bashrc
-~/.tfenv/tfenv install 1.0.2 && tfenv use 1.0.2
+~/.tfenv/bin/tfenv install 1.0.8 && ~/.tfenv/bin/tfenv use 1.0.8
 
-wget -q "https://download.jetbrains.com/python/pycharm-community-2021.1.3.tar.gz" &&
-tar xfz pycharm-community-2021.1.3.tar.gz &&
-mv pycharm-community-2021.1.3 ~
+wget -q "https://download.jetbrains.com/python/pycharm-community-2021.2.2.tar.gz" &&
+tar xfz pycharm-community-2021.2.2.tar.gz &&
+mv pycharm-community-2021.2.2 ~
 
 curl -s https://baltocdn.com/helm/signing.asc | sudo apt-key add -
 echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list

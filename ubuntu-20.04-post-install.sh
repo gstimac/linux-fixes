@@ -7,7 +7,7 @@ sudo apt -qq install -y apt-transport-https curl vim git tlp vlc qbittorrent
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.bashrc
 . ~/.bashrc
-tfenv install 1.0.2 && tfenv use 1.0.2
+~/.tfenv/tfenv install 1.0.2 && tfenv use 1.0.2
 
 wget -q "https://download.jetbrains.com/python/pycharm-community-2021.1.3.tar.gz" &&
 tar xfz pycharm-community-2021.1.3.tar.gz &&
